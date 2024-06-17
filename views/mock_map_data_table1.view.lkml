@@ -11,6 +11,20 @@ view: mock_map_data_table1 {
     # A dimension is a groupable field that can be used to filter query results.
     # This dimension will be called "Active" in Explore.
 
+  #dimension: info_zip_code {
+  # type: string
+  #  sql: ${TABLE}.info_zip_code ;;
+  #  map_layer_name:madrid
+  #}
+
+  #dimension: info_town {
+  #  type: string
+  #  sql: ${TABLE}.info_town ;;
+  #  map_layer_name: municipios_madrid
+  #}
+
+
+
   dimension: active {
     type: yesno
     sql: ${TABLE}.active ;;
@@ -29,17 +43,23 @@ view: mock_map_data_table1 {
 
   dimension: region {
     type: string
+    map_layer_name: region_map
     sql: ${TABLE}.region ;;
+    drill_fields: [zipcode ]
   }
+
 
   dimension: territory {
     type: string
     sql: ${TABLE}.territory ;;
+    map_layer_name: territory_map
+    drill_fields: [region, zipcode ]
   }
 
   dimension: zipcode {
     type: zipcode
     sql: ${TABLE}.zipcode ;;
+    map_layer_name:us_zipcode_tabulation_areas
   }
   measure: count {
     type: count
