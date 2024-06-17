@@ -13,7 +13,7 @@ datagroup: maps_drilling_testing_default_datagroup {
 }
 
 persist_with: maps_drilling_testing_default_datagroup
-explore: mock_map_data_table2 {}
+explore: mock_map_data_table3 {}
 
 map_layer: territory_map {
   file: "/maps_json/territory.json"

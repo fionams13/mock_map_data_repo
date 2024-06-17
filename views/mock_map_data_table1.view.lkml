@@ -1,8 +1,8 @@
 # The name of this view in Looker is "Mock Map Data Table1"
-view: mock_map_data_table2 {
+view: mock_map_data_table3 {
   # The sql_table_name parameter indicates the underlying database table
   # to be used for all fields in this view.
-  sql_table_name: `hcls2-ship-demo-dev.mock_map_data_dataset.mock_map_data_table2` ;;
+  sql_table_name: `hcls2-ship-demo-dev.mock_map_data_dataset.mock_map_data_table3` ;;
 
   # No primary key is defined for this view. In order to join this view in an Explore,
   # define primary_key: yes on a dimension that has no repeated values.
@@ -34,6 +34,7 @@ view: mock_map_data_table2 {
     type: string
     map_layer_name: countries
     sql: ${TABLE}.country ;;
+    drill_fields: [region, territory, zipcode ]
   }
 
   dimension: patient {
@@ -45,7 +46,7 @@ view: mock_map_data_table2 {
     type: string
     map_layer_name: region_map
     sql: ${TABLE}.region ;;
-    drill_fields: [zipcode ]
+    drill_fields: [territory, zipcode ]
   }
 
 
@@ -53,7 +54,7 @@ view: mock_map_data_table2 {
     type: string
     sql: ${TABLE}.territory ;;
     map_layer_name: territory_map
-    drill_fields: [region, zipcode ]
+    drill_fields: [zipcode ]
   }
 
   dimension: zipcode {
