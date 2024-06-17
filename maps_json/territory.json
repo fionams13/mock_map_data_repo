@@ -3,7 +3,7 @@
     "features": [
       {
         "type": "Feature",
-        "properties": {},
+        "properties": {"name": "terr1"},
         "geometry": {
           "coordinates": [
             [
@@ -34,7 +34,7 @@
       },
       {
         "type": "Feature",
-        "properties": {},
+        "properties": {"name": "terr2"},
         "geometry": {
           "coordinates": [
             [
@@ -65,7 +65,7 @@
       },
       {
         "type": "Feature",
-        "properties": {},
+        "properties": {"name": "terr3"},
         "geometry": {
           "coordinates": [
             [
