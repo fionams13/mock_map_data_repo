@@ -15,10 +15,10 @@ datagroup: maps_drilling_testing_default_datagroup {
 persist_with: maps_drilling_testing_default_datagroup
 explore: mock_map_data_table4 {}
 
-map_layer: territory_map {
-  file: "/maps_json/territory.json"
-}
+#map_layer: territory_map {
+ # file: "/maps_json/territory.json"
+#}
 
-map_layer: region_map {
-  file: "/maps_json/region.json"
-}
+#map_layer: region_map {
+ # file: "/maps_json/region.json"
+#}

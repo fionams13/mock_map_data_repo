@@ -44,7 +44,7 @@ view: mock_map_data_table4 {
 
   dimension: region {
     type: string
-    map_layer_name: region_map
+    #map_layer_name: region_map
     sql: ${TABLE}.region ;;
     drill_fields: [territory, zipcode ]
   }
@@ -53,7 +53,7 @@ view: mock_map_data_table4 {
   dimension: territory {
     type: string
     sql: ${TABLE}.territory ;;
-    map_layer_name: territory_map
+    #map_layer_name: territory_map
     drill_fields: [zipcode ]
   }
 
